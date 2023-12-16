@@ -1,6 +1,5 @@
 import React from "react";
-import {NavLink } from "react-router-dom"
-
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -10,8 +9,8 @@ const Navbar = () => {
           <div className="col-10 mx-auto">
             <nav className="navbar navbar-expand-lg navbar-light">
               <div className="container-fluid">
-                <NavLink  exact className="navbar-brand" to="/">
-                  Company Name
+                <NavLink exact className="navbar-brand" to="/">
+                  Geamgiu Reșița (Caraș-Severin)
                 </NavLink>
                 <button
                   className="navbar-toggler"
@@ -30,7 +29,9 @@ const Navbar = () => {
                 >
                   <ul className="navbar-nav ml-auto mb-2 mb-lg-0">
                     <li className="nav-item">
-                      <NavLink activeClassName="menu_active"  exact
+                      <NavLink
+                        activeClassName="menu_active"
+                        exact
                         className="nav-link active"
                         aria-current="page"
                         to="/"
@@ -39,17 +40,32 @@ const Navbar = () => {
                       </NavLink>
                     </li>
                     <li className="nav-item">
-                      <NavLink activeClassName="menu_active"  exact className="nav-link" to="/services">
+                      <NavLink
+                        activeClassName="menu_active"
+                        exact
+                        className="nav-link"
+                        to="/services"
+                      >
                         Services
                       </NavLink>
                     </li>
                     <li className="nav-item">
-                      <NavLink activeClassName="menu_active"  exact className="nav-link" to="/about">
+                      <NavLink
+                        activeClassName="menu_active"
+                        exact
+                        className="nav-link"
+                        to="/about"
+                      >
                         About
                       </NavLink>
                     </li>
                     <li className="nav-item">
-                      <NavLink activeClassName="menu_active"  exact className="nav-link" to="/contact">
+                      <NavLink
+                        activeClassName="menu_active"
+                        exact
+                        className="nav-link"
+                        to="/contact"
+                      >
                         Contact
                       </NavLink>
                     </li>
