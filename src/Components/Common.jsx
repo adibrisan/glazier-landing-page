@@ -32,7 +32,7 @@ const Common = ({ name, imgsrc, isCompName, compName, visit, btnname }) => {
                   <img
                     src={imgsrc}
                     className="img-fluid animated"
-                    alt="Home Img"
+                    alt="imagine geamgiu cu sticla"
                   />
                 </div>
               </div>
