@@ -13,6 +13,7 @@ const Navbar = () => {
                   Geamgiu Reșița (Caraș-Severin)
                 </NavLink>
                 <button
+                  style={{ zIndex: 10 }}
                   className="navbar-toggler"
                   type="button"
                   data-bs-toggle="collapse"

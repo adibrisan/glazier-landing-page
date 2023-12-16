@@ -1,5 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { FaPhone } from "react-icons/fa";
+import { FaMapLocationDot } from "react-icons/fa6";
 
 const Common = ({ name, imgsrc, isCompName, compName, visit, btnname }) => {
   return (
@@ -25,6 +27,35 @@ const Common = ({ name, imgsrc, isCompName, compName, visit, btnname }) => {
                     <NavLink to={visit} className="btn-get-started ">
                       {btnname}
                     </NavLink>
+                  </div>
+                  <div className="flex flex-column my-5 w-auto">
+                    <div className="flex items-center">
+                      <FaPhone
+                        color="gray"
+                        style={{ marginBottom: "10px", marginRight: "10px" }}
+                        size={30}
+                      />
+                      <a style={{ fontSize: "30px" }} href="tel:+40771718931">
+                        0771 718 931
+                      </a>
+                    </div>
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        fontSize: "25px",
+                        marginTop: "15px",
+                      }}
+                    >
+                      <FaMapLocationDot
+                        color="gray"
+                        style={{ marginBottom: "12px", marginRight: "10px" }}
+                        size={30}
+                      />
+                      <address>
+                        Bulevardul republicii 2, Resita, Zona Intim
+                      </address>
+                    </div>
                   </div>
                 </div>
 
