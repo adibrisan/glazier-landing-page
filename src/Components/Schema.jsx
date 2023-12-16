@@ -7,7 +7,7 @@ const BusinessInfo = () => {
       itemscope
       itemtype="http://schema.org/LocalBusiness"
     >
-      <h1 itemprop="name">Geamuri și Rame Reșița</h1>
+      <h1 itemprop="name">geamgiu resita</h1>
       <p itemprop="description">
         Magazinul nostru oferă o gamă variată de rame și geamuri de înaltă
         calitate.
