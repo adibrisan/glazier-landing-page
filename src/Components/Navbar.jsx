@@ -1,7 +1,22 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
+  const [smallerThan650, setSmallerThan650] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setSmallerThan650(window.innerWidth < 650);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <>
       <div className="container-fluid nav_bg">
@@ -9,7 +24,7 @@ const Navbar = () => {
           <div className="col-10 mx-auto">
             <nav className="navbar navbar-expand-lg navbar-light">
               <div className="container-fluid">
-                <NavLink exact className="navbar-brand" to="/">
+                <NavLink exact className="navbar-brand text-wrap" to="/">
                   Geamgiu Reșița (Caraș-Severin)
                 </NavLink>
                 <button

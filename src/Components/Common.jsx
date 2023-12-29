@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { FaPhone } from "react-icons/fa";
 import { FaMapLocationDot } from "react-icons/fa6";
 
 const Common = ({ name, imgsrc, isCompName, compName, visit, btnname }) => {
+  const [smallerThan650, setSmallerThan650] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setSmallerThan650(window.innerWidth < 650);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <>
       <section id="header" className="d-flex align-items-center">
@@ -12,7 +27,12 @@ const Common = ({ name, imgsrc, isCompName, compName, visit, btnname }) => {
             <div className="col-10 mx-auto">
               <div className="row">
                 <div className="col-md-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex justify-content-center flex-column">
-                  <h1>
+                  <h1
+                    style={{
+                      fontSize: smallerThan650 ? "1.5rem" : "2.5rem",
+                      fontWeight: "bold",
+                    }}
+                  >
                     {name}
                     {isCompName ? (
                       <strong className="brand-name"> {compName}</strong>
@@ -20,11 +40,26 @@ const Common = ({ name, imgsrc, isCompName, compName, visit, btnname }) => {
                       ""
                     )}
                   </h1>
-                  <h2 className="my-3">
+                  <h2
+                    className="my-3"
+                    style={{
+                      fontSize: smallerThan650 ? "1.2rem" : "2.5rem",
+                      fontWeight: "bold",
+                    }}
+                  >
                     Ne ocupăm și cu vânzarea ușilor din lemn de brad
                   </h2>
                   <div className="mt-3">
-                    <NavLink to={visit} className="btn-get-started ">
+                    <NavLink
+                      to={visit}
+                      className="btn-get-started"
+                      style={{
+                        fontSize: smallerThan650 ? "0.85rem" : "1.5rem",
+                        padding: smallerThan650
+                          ? "0.5rem 0.75rem"
+                          : "0.5rem 1.5rem",
+                      }}
+                    >
                       {btnname}
                     </NavLink>
                   </div>
@@ -65,7 +100,12 @@ const Common = ({ name, imgsrc, isCompName, compName, visit, btnname }) => {
                   </div>
                 </div>
 
-                <div className="col-lg-6 order-1 order-lg-2 header-image">
+                <div
+                  className="col-lg-6 order-1 order-lg-2 header-image"
+                  style={{
+                    display: smallerThan650 ? "none" : undefined,
+                  }}
+                >
                   <img
                     src={imgsrc}
                     className="img-fluid animated"
