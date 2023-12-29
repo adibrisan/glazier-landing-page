@@ -53,7 +53,12 @@ const Common = ({ name, imgsrc, isCompName, compName, visit, btnname }) => {
                         size={30}
                       />
                       <address>
-                        Bulevardul republicii 2, Resita, Zona Intim
+                        <a
+                          href="https://www.google.com/maps/place/Geamuri+Resita+Costel+Brisan/@45.3187373,21.8799736,17z/data=!3m1!4b1!4m6!3m5!1s0x474fd70743a06e8b:0x8b571224fdcbeb72!8m2!3d45.3187373!4d21.8799736!16s%2Fg%2F11vlyxv5f1?authuser=0&hl=ro&entry=ttu"
+                          target="_blank"
+                        >
+                          Bulevardul republicii 2, Resita, Zona Intim
+                        </a>
                       </address>
                     </div>
                   </div>
