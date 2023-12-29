@@ -27,6 +27,7 @@ const Navbar = () => {
                 <div
                   className="collapse navbar-collapse"
                   id="navbarSupportedContent"
+                  style={{ zIndex: 10 }}
                 >
                   <ul className="navbar-nav ml-auto mb-2 mb-lg-0">
                     <li className="nav-item">
