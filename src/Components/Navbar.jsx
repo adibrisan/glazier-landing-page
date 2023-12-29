@@ -1,22 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
-  const [smallerThan650, setSmallerThan650] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setSmallerThan650(window.innerWidth < 650);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    handleResize();
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
   return (
     <>
       <div className="container-fluid nav_bg">
